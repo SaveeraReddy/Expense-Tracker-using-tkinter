@@ -1,6 +1,3 @@
-for i in range(10)
-    print(hello)
-
 import sqlite3
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg

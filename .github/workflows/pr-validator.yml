@@ -27,7 +27,7 @@ jobs:
 
     - name: List Python Files
       run: |
-        find . -name "*.py"
+        find . -name "*"
 
     - name: Run Code Quality Check (Syntax Errors)
       run: |

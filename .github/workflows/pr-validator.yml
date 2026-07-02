@@ -2,7 +2,7 @@ name: PR Quality and Test Checks
 
 on:
   pull_request:
-    branches: [ "main" ]
+    branches: [ "dev",  "main" ]
 
 jobs:
   test-and-lint:

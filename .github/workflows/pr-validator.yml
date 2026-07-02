@@ -21,6 +21,22 @@ jobs:
       run: |
         pip install -r .github/workflows/requirements.txt
 
+    - name: Check Flake8 Version
+      run: |
+        flake8 --version
+
+    - name: List All Notebooks
+      run: |
+        find . -name "*.ipynb"
+
+    - name: List Python Files
+      run: |
+        find . -name "*"
+
+    - name: Test nbqa
+      run: |
+        nbqa flake8 test_noteook.ipynb --select=E9
+
     - name: Run Code Quality Check (Syntax Errors)
       run: |
         flake8 . --config=.github/workflows/.flake8 --count --select=E9,F63,F7,F82 --show-source --statistics

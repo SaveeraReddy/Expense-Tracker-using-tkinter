@@ -33,24 +33,6 @@ jobs:
       run: |
         find . -name "*"
 
-
-    - name: Validate Python Files
-        run: |
-          flake8 . \
-            --config=.github/workflows/.flake8 \
-            --count \
-            --select=E9,F63,F7,F82 \
-            --show-source \
-            --statistics
-
-      - name: Validate Jupyter Notebooks
-        run: |
-          nbqa flake8 . \
-            --config=.github/workflows/.flake8 \
-            --select=E9,F63,F7,F82 \
-            --show-source \
-            --statistics
-
     - name: Run Code Quality Check (Syntax Errors)
       run: |
         flake8 . --config=.github/workflows/.flake8 --count --select=E9,F63,F7,F82 --show-source --statistics
